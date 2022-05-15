@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import ContactCard from './ContactCard'
 
 const ContactList = ({contacts, getContactId}) => {
@@ -6,12 +7,23 @@ const ContactList = ({contacts, getContactId}) => {
     
     const renderContactList = contacts.map((contact) => {
         return (
-            <ContactCard contact={contact} removeContact={getContactId} ></ContactCard>
+            <ContactCard key={contact.id} contact={contact} removeContact={getContactId} ></ContactCard>
         )
     })
     return (
       
         <div>
+        <div className='row'>
+            <div className='col-8'>
+                <h2>Contact List</h2>
+            </div>
+            <div className='col-4'>
+            <Link to="/add">
+                <button className='btn btn-primary'>Add Contact</button>
+            </Link>
+            </div>
+        </div>
+
             {renderContactList}
         </div>
     )

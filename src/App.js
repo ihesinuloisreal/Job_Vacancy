@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import { uuid } from 'uuidv4';
+import {BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './Component/Header'
 import AddContact from './Component/AddContact'
 import ContactList from './Component/ContactList'
@@ -34,19 +35,23 @@ function App() {
 
 
   return (
-    <div>
-      <div className='container d-flex justify-content-center mt-4'>
-      <Header />
-      </div>
-      <div className='container'>
-      <AddContact addContactHanler={addContactHanler}/>
-      <div className='mt-3'>
-      <ContactList contacts={contacts} getContactId={removeContactHandle}/>
-      </div>
-      </div>
+    <Router>
+
+    <Header />
+    <div className='container'>
+      <Routes>
+        
       
-    </div>
+        <Route path='/' element={<ContactList contacts={contacts} getContactId={removeContactHandle}/>}/>
+      
+        <Route path='/add' element={<AddContact addContactHanler={addContactHanler}/>}/>
+        
+        </Routes>
+        </div> 
+
+      </Router>
     
+
   );
 }
 

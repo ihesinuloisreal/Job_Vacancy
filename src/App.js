@@ -4,6 +4,8 @@ import {BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './Component/Header'
 import AddContact from './Component/AddContact'
 import ContactList from './Component/ContactList'
+import ContactDetail from './Component/ContactDetail';
+
 
 
 function App() {
@@ -50,6 +52,7 @@ function App() {
         />
       
         <Route path='/add' element={<AddContact addContactHanler={addContactHanler}/>}/>
+        <Route path='/contact/:id' element={<ContactDetail/>}/>
         
         </Routes>
         </div> 

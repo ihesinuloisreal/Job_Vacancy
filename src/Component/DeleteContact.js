@@ -14,10 +14,10 @@ const DeleteContact = ({ removeContact}) => {
       <div className='container'>
         <h4>Do you want to delete this contact</h4>
     <Link to="/">
-    <button className='btn btn-primary' onClick={() => {deleteHandler()}}>Yes</button>
+    <button className='btn btn-success' onClick={() => {deleteHandler()}}>Yes</button>
     </Link>
     <Link to="/">
-    <button className='btn btn-primary'>No</button>
+    <button className='btn btn-danger'>No</button>
     </Link>
     </div>
   )

@@ -2,12 +2,12 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import ContactCard from './ContactCard'
 
-const ContactList = ({contacts, getContactId}) => {
+const ContactList = ({contacts}) => {
 
     
     const renderContactList = contacts.map((contact) => {
         return (
-            <ContactCard key={contact.id} contact={contact} removeContact={getContactId} ></ContactCard>
+            <ContactCard key={contact.id} contact={contact} ></ContactCard>
         )
     })
     return (

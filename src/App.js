@@ -5,6 +5,7 @@ import Header from './Component/Header'
 import AddContact from './Component/AddContact'
 import ContactList from './Component/ContactList'
 import ContactDetail from './Component/ContactDetail';
+import DeleteContact from './Component/DeleteContact';
 
 
 
@@ -19,6 +20,7 @@ function App() {
   };
   
   const removeContactHandle = (id) => {
+    console.log(id)
     const newContactlist = contacts.filter((contact) => {
       return contact.id !== id;
     });
@@ -47,16 +49,17 @@ function App() {
         <Route exact path='/' 
           element={<ContactList 
           contacts={contacts} 
-          getContactId={removeContactHandle}/>}
+          />}
 
         />
       
         <Route path='/add' element={<AddContact addContactHanler={addContactHanler}/>}/>
         <Route path='/contact/:id' element={<ContactDetail/>}/>
+        <Route path='/delete/:id' element={<DeleteContact removeContact={removeContactHandle}/>} />
         
         </Routes>
         </div> 
-
+        
       </Router>
     
 

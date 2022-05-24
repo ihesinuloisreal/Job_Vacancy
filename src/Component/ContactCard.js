@@ -13,15 +13,16 @@ const ContactCard = (props) => {
         <img className="bd-placeholder-img rounded-circle" alt='Profile' width="70" height="70" src={user}/>
     </div>
             <div className='col-8'>
-            <Link to='/contact/${id}' state={{ id,name,email }}>
+            <Link to='/contact/${id}' state = {{ id,name,email }}>
                <h5>{name}</h5> 
                <p>{email}</p>
               </Link>
             </div>
             <div className='col-2'>
-            <FontAwesomeIcon icon={solid('trash-can')} style={{color: "red", marginTop: "7px", cursor: "pointer"}}
-                onClick={() => props.removeContact(id)}
-            />
+            <Link to='/delete/${id}' state = {{ id }}>
+
+            <FontAwesomeIcon icon={solid('trash-can')} style={{color: "red", marginTop: "7px", cursor: "pointer"}}/>
+            </Link>
           </div>
       </div>
     </div>

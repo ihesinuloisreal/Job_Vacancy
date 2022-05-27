@@ -6,17 +6,29 @@ import AddContact from './Component/AddContact'
 import ContactList from './Component/ContactList'
 import ContactDetail from './Component/ContactDetail';
 import DeleteContact from './Component/DeleteContact';
+import api from './api/Contact';
 
 
 
 function App() {
 
   const LOCAL_STORAGE_KEY = "contacts";
-
   const [contacts,setcontact] = useState([]);
 
-  const addContactHanler = (contact) => {
-    setcontact([...contacts,{id: uuid(), ...contact}]);
+  //retrieving contact
+  const retrieveContact = async () => {
+    const responce = await api.get("/contact");
+    return responce.data;
+  }
+
+  const addContactHanler = async (contact) => {
+    const request = {
+      id: uuid(),
+      ...contact,
+    }
+
+    const responce = await api.post("/contact", request)
+    setcontact([responce.data]);
   };
   
   const removeContactHandle = (id) => {
@@ -28,8 +40,14 @@ function App() {
     setcontact(newContactlist);
   }
   useEffect(() => {
-    const Retriev = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY));
-      if (Retriev) setcontact(Retriev);
+    // const Retriev = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY));
+    //   if (Retriev) setcontact(Retriev);
+    const getAllContacts = async () => {
+      const allContact = await retrieveContact();
+      if (allContact) setcontact(allContact);
+    };
+
+    getAllContacts();
   }, []);
 
   useEffect(() => {

@@ -19,6 +19,9 @@ const ContactCard = (props) => {
               </Link>
             </div>
             <div className='col-2'>
+            <Link to='/edit/${id}' state = {{ id,name,email }}>
+                <FontAwesomeIcon icon={solid('edit')} style={{color: "blue", marginTop: "7px", cursor: "pointer"}}/>
+            </Link>
             <Link to='/delete/${id}' state = {{ id }}>
 
             <FontAwesomeIcon icon={solid('trash-can')} style={{color: "red", marginTop: "7px", cursor: "pointer"}}/>

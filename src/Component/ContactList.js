@@ -1,8 +1,10 @@
-import React from 'react'
+import React, { useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import ContactCard from './ContactCard'
 
-const ContactList = ({contacts}) => {
+const ContactList = ({contacts, searchkeyword, term}) => {
+    // const [searchTerm, setsearchterm] = useState("")
+    const inputEl = useRef("");
 
     
     const renderContactList = contacts.map((contact) => {
@@ -10,6 +12,10 @@ const ContactList = ({contacts}) => {
             <ContactCard key={contact.id} contact={contact} ></ContactCard>
         )
     })
+    const getSearch = () =>{
+        // console.log(inputEl.current.value);
+        searchkeyword(inputEl.current.value)
+    }
     return (
       
         <div>
@@ -23,8 +29,12 @@ const ContactList = ({contacts}) => {
             </Link>
             </div>
         </div>
+        <div className='input-group mb-3'>
+            <input ref={inputEl} type="text" className='form-control' placeholder='Search Contact' value={term} onChange={getSearch}/>
+        </div>
 
-            {renderContactList}
+
+            {renderContactList.length > 0 ? renderContactList : "No record found" }
         </div>
     )
   

@@ -55,3 +55,6 @@
 .dropdown-toggle {
   outline: 0;
 }
+.container {
+  padding-top: 50%;
+}

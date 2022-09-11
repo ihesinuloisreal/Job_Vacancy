@@ -1,26 +1,23 @@
 import React, { useEffect } from 'react'
-import Home from "./pages/Home";
-import About from './pages/About';
 import { Routes, Route } from "react-router-dom";
-import Contact from './pages/Contact';
+import Create_post from './Admin/Create_post';
 import Input from './pages/Input';
+import Home from './User/Home';
+import News from './User/News';
+import News_View from './User/News_View';
 
 
 function App() {
-  const LOCAL_STORAGE_KEY = "contacts";
-
-  useEffect(() => {
-    const Retriev = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY));
-    if (Retriev) setcontact(Retriev);
-  })
-    
+  
   return (
-    <div className='container'>
+    <div>
       <Routes>
-          {/* <Route path="/" element={<Home/>} />
-          <Route path="about" element={<About />} />
-          <Route path="contact" element={<Contact />} /> */}
-          <Route path="/" element={<Input/>} />
+          <Route path="/" element={<Home/>} />
+          <Route path="/News" element={<News/>} />
+          <Route path="/News_View" element={<News_View/>} />
+          <Route path="/Admin/Create_post" element={<Create_post/>} />
+
+
       </Routes>
       
     </div>

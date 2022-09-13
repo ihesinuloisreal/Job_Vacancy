@@ -3,22 +3,73 @@ import React from 'react'
 const Footer = () => {
   return (
     <>
-    <footer class="bg-dark d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+     <div class="footer-top">
+          <div class="container">
+            <div class="row">
     
-    <p class="col-md-4 mb-0 text-muted">&copy; 2021 Company, Inc</p>
-
-    <a href="/" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
-      <svg class="bi me-2" width="40" height="32"></svg>
-    </a>
-
-    <ul class=" container nav col-md-4 justify-content-end">
-      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
-      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Features</a></li>
-      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Pricing</a></li>
-      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQs</a></li>
-      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
-    </ul>
-  </footer>
+              <div class="col-lg-3 col-md-6 footer-contact">
+                <h3>Company</h3>
+                <p>
+                  A108 Adam Street <br/>
+                  New York, NY 535022<br/>
+                  United States <br/><br/>
+                  <strong>Phone:</strong> +1 5589 55488 55<br/>
+                  <strong>Email:</strong> info@example.com<br/>
+                </p>
+              </div>
+    
+              <div class="col-lg-2 col-md-6 footer-links">
+                <h4>Useful Links</h4>
+                <ul>
+                  <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
+                  <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
+                  <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
+                  <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
+                  <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+                </ul>
+              </div>
+    
+              <div class="col-lg-3 col-md-6 footer-links">
+                <h4>Our Services</h4>
+                <ul>
+                  <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
+                  <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
+                  <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
+                  <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
+                  <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
+                </ul>
+              </div>
+    
+              <div class="col-lg-4 col-md-6 footer-newsletter">
+                <h4>Join Our Newsletter</h4>
+                <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
+                <form action="" method="post">
+                  <input type="email" name="email"/><input type="submit" value="Subscribe"/>
+                </form>
+              </div>
+    
+            </div>
+          </div>
+        </div>
+    
+        <div class="container d-md-flex py-4">
+    
+          <div class="mr-md-auto text-center text-md-left">
+            <div class="copyright">
+              &copy; Copyright <strong><span>Company</span></strong>. All Rights Reserved
+            </div>
+            <div class="credits">
+            <a href="https://bootstrapmade.com/">BootstrapMade</a>
+            </div>
+          </div>
+          <div class="social-links text-center text-md-right pt-3 pt-md-0">
+            <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+            <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+            <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+            <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+            <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+          </div>
+        </div>
     </>
   )
 }

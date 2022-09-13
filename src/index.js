@@ -23,8 +23,12 @@ import App from './App';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
+<<<<<<< HEAD
   <BrowserRouter>
     <App />
   </BrowserRouter>
+=======
+    <App />
+>>>>>>> 6f0ec2ff5ebf055e34057dbc9d421813880067ac
 );
 

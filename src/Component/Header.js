@@ -1,11 +1,7 @@
-<<<<<<< HEAD
-import React, { useState } from 'react'
-import Li from './Li'
+import React, { useState } from 'react';
+import Li from './Li';
 // import RoundImg from './RoundImg'
 import { Link } from "react-router-dom";
-=======
-import React from 'react'
->>>>>>> 6f0ec2ff5ebf055e34057dbc9d421813880067ac
 
 const Header = () => {
   // const [isAcitve, setisActive] = useState(false);
@@ -14,7 +10,6 @@ const Header = () => {
   // };
   
   return (
-<<<<<<< HEAD
     <>
     <header id="header" className="fixed-top">
         <div className="container d-flex align-items-center">
@@ -54,11 +49,6 @@ const Header = () => {
         </div>
       </header>
     </>
-=======
-        <div className='container d-flex justify-content-center mt-4'>
-            <h2>Contact Manager</h2>
-        </div>
->>>>>>> 6f0ec2ff5ebf055e34057dbc9d421813880067ac
   )
 }
 

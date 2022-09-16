@@ -4,24 +4,21 @@ import Li from './Li';
 import { Link } from "react-router-dom";
 
 const Header = () => {
-  // const [isAcitve, setisActive] = useState(false);
-  // const handleClick = (e) => {
-  //   setisActive(current => !current);
-  // };
+  
   
   return (
     <>
     <header id="header" className="fixed-top">
         <div className="container d-flex align-items-center">
     
-          <h1 className="logo mr-auto"><a href="index.html"><span>IE</span>NETWORK</a></h1>
+          <h1 className="logo mr-auto"><a href="index.html"><span>Job_</span>_Update</a></h1>
          
          <a href="index.html" className="logo mr-auto"><img src="assets/img/logo.png" alt="" className="img-fluid"/></a>
     
           <nav className="nav-menu d-none d-lg-block">
             <ul>
               <li ><a href='/'>Home</a></li>
-    
+              <li><a href='news'>Jobs</a></li>
               <li className="drop-down"><a href=''>About</a>
                 <ul>
                   <li><a href=''>About Us</a></li>
@@ -30,13 +27,9 @@ const Header = () => {
                   
                 </ul>
               </li>
-  
-              <li><a href='news'>Blog</a></li>
               <li><a href=''>Contact</a></li>
     
             </ul>
-            {/* <button className={isAcitve ? 'btn btn-success' : 'btn btn-primary'} onClick={handleClick}>click</button> */}
-
           </nav>
     
           <div className="header-social-links">

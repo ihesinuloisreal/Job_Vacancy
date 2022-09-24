@@ -7,6 +7,7 @@ import Home from './User/Home';
 import News from './User/News';
 import News_View from './User/News_View';
 import Register from './Auth/Register'
+import Login from './Auth/Login';
 
 
 function App() {
@@ -18,7 +19,9 @@ function App() {
           <Route path="/News" element={<News/>} />
           <Route path="/News_View" element={<News_View/>} />
           <Route path="/Admin/Create_post" element={<Create_post/>} />
-          <Route path="register" element={<Register/>} />
+          <Route path="/register" element={<Register/>} />
+          <Route path="/login" element={<Login/>} />
+
 
 
       </Routes>

@@ -15,7 +15,8 @@ function Article() {
     })
   }, [])
 
-  // if (post.lenght > 0) 
+  if (post.length > 0) {
+
   return (
     <>
   {
@@ -56,7 +57,10 @@ function Article() {
   ): null
     }
     </>
-  )
+  )}
+  else{
+    return <h3> No record Found</h3>
+  }
   // }
 }
 

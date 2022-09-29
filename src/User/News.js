@@ -38,7 +38,7 @@ export class News extends Component {
                 {/* Article */}
                 <Article/>
     
-                <div class="blog-pagination">
+                {/* <div class="blog-pagination">
                   <ul class="justify-content-center">
                     <li class="disabled"><i class="icofont-rounded-left"></i></li>
                     <li><a href="#">1</a></li>
@@ -46,7 +46,7 @@ export class News extends Component {
                     <li><a href="#">3</a></li>
                     <li><a href="#"><i class="icofont-rounded-right"></i></a></li>
                   </ul>
-                </div>
+                </div> */}
     
               </div>
     

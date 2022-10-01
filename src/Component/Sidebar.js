@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 
 function Sidebar() {
   const [post, setpost] = useState("");
+  const [result, setResult] = useState("");
 
 
   useEffect(() => {
@@ -15,6 +16,8 @@ function Sidebar() {
     })
   }, [])
 
+  
+
   if (post.length > 0) {
 
   return (
@@ -25,8 +28,8 @@ function Sidebar() {
         <h3 class="sidebar-title">Search</h3>
         <div class="sidebar-item search-form">
           <form action="">
-            <input type="text"/>
-            <button type="submit"><i class="icofont-search"></i></button>
+            <input type="text" onChange={(e)=>setResult(e.target.value)}/>
+            {/* <button type="submit"><i class="icofont-search"></i></button> */}
           </form>
 
         </div>
@@ -48,7 +51,13 @@ function Sidebar() {
           <div class="post-item clearfix">
           {
      post.length ?
-    post.map((posts) => (<>
+    post.filter((posts) => {
+    if (result === '') {
+      return posts;
+    } else {
+      return posts.headling.toLowerCase().includes(result.toLowerCase())
+    }
+  }).map((posts) => (<>
             <img src="assets/img/blog-recent-posts-5.jpg" alt=""/>
             <h4 key={posts.id}><a href="blog-single.html">{posts.headling}</a></h4>
             <time datetime="2020-01-01">Jan 1, 2020</time>

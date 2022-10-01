@@ -33,9 +33,19 @@ function Login() {
                 <span class="brand-name">Welcome!</span>
               </div>
             </div>
+            
+            
             <div class="card-body p-5"> 
+            <div className="container d-flex align-items-center">
+                <h4><a href='' className="twitter"><i className="icofont-twitter"></i></a></h4> 
+                <h4><a href='' className="facebook"><i className="icofont-facebook"></i></a></h4>
+                <h4><a href='' className="instagram"><i className="icofont-instagram"></i></a></h4>
+                <h4><a href='' className="linkedin"><i className="icofont-linkedin"></i></a></h4>
+              
+            </div>
 
               <h4 class="text-dark mb-5">Sign In</h4>
+              
               <form onSubmit={postContent}>
                 <div class="row">
                   <div class="form-group col-md-12 mb-4">
